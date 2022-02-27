@@ -70,7 +70,7 @@ jobs:
     #    uses a compiled language
 
     - run: |
-       dotnet build Netflix.sln /p:UseSharedCompilation=false
+       dotnet build Netflix.sln -p:Version=v4.7.2 /p:UseSharedCompilation=false
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@main
 
