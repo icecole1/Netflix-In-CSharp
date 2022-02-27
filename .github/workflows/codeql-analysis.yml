@@ -12,13 +12,12 @@
 name: "CodeQL"
 
 on:
-  workflow_dispatch:
-
   push:
     branches: [ main ]
     paths:
     - '**.cs'
     - '**.csproj'
+
 
   pull_request:
     # The branches below must be a subset of the branches above
@@ -28,6 +27,7 @@ on:
     - '**.csproj'
   schedule:
     - cron: '0 2 * * 1-5'
+  workflow_dispatch:
 
 jobs:
   analyze:
